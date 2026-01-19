@@ -4,24 +4,64 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
+
+/* common styles start  */
 button{
     cursor: pointer;
 }
-.transform{
+#transform{
     cursor: pointer;
-    box-sizing: border-box;
-}
-.copy-right:hover{
     transition: all 1s ease-in-out 0s;
-    margin-right: 20px;
+}
+#transform:hover{
+    transform: scale(1.05);
+    margin-left: 10px;
+    color: white;
     /* transform: scale(1.1); */
 }
+#cards-transform{
+    transition: all 1s ease-in-out 0s;
+
+}
+#cards-transform:hover{
+    transform: scale(1.05);
+}
+/* icons transition  */
+.cir{
+    transition: all 1s ease-in-out 0s;
+    cursor: pointer;
+}
+.cir:hover{
+    transform: scale(1.2);
+    margin:0px 10px  40px 10px;
+}
+/* footer transfonm */
+.fi{
+    transition: all 1s ease-in-out 0s;
+    cursor: pointer;
+}
+.fi:hover{
+    transform: scale(1.2);
+
+}
+.fi:hover #sp,nav ul li#sp:hover{
+    background-image: linear-gradient(40deg,#F7E93F,#FB09B4,#9100F8);
+    background-clip: text;
+    color:transparent;
+    font-weight: 800;
+}
+/* footer .sponser-content img{
+    filter:brightness(red);
+} */
 .container{
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
 }
+
+/* common styles end  */
+
 header{
     background:rgba(26, 11, 46, 1);
     width: 100%;
@@ -51,6 +91,8 @@ header nav ul li{
     cursor: pointer;
     font-weight: 500;
     color: #ffffff;
+        transition: all 1s ease-in-out 0s;
+
 }
 header nav button{
     width: 135px;
@@ -111,7 +153,11 @@ header nav button:hover{
     margin: 0 auto;
     position: relative;
     margin-bottom: 40px;
-
+    transition: all 1.5s ease-in-out 0s;
+    cursor: pointer;
+}
+.hero-section .abs:hover{
+    transform: scale(1.2);
 }
 .hero-section >img{
     width: 100%;
@@ -271,6 +317,7 @@ header nav button:hover{
     padding: 40px;
     border-radius: 40px;
     background-color: rgba(53, 17, 101, 0.4);
+    overflow: hidden;
 }
 .grid-container >div h1{
     font-size: 24px;
@@ -327,6 +374,17 @@ header nav button:hover{
     background-color: #250D44;
     border-radius: 20px;
     height: 480px;
+    position: relative;
+}
+.play-button{
+    z-index: 11;
+    width: 100px;
+    height: 100px;
+    /* background: linear-gradient(35deg,#F7E93F,#FB09B4,#9100F8); */
+    border-radius: 50%;
+    position: absolute;
+    top: 14%;
+    left: 36%;
 }
 .fear-card-container .ifrem-card iframe{
     width: 100%;
@@ -427,12 +485,12 @@ footer h1 span{
     color: transparent;
 }
 footer .sponser{
-    max-width: 544px;
+    max-width: 944px;
     margin: 32px auto;
     display: flex;
     gap: 40px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 footer .sponser .sponser-content{
     display: flex;
@@ -451,10 +509,17 @@ footer .copy-right{
 
 
 /* small device responsive */
-@media screen and (min-width:992px) and (max-width:1280px) {
-
- 
+/* @media screen and (min-width:992px) and (max-width:1280px) {
+.grid-container > div {
+    padding: 30px;
+    
 }
+.grid-container #cards-transform{
+    height: 600px;
+    background-color: #fff;
+}
+ 
+} */
 
 @media screen and (max-width:576px) {
     .container{
@@ -591,6 +656,12 @@ footer .copy-right{
 .fear-card-container .ifrem-card iframe{
     height: 245px;
 }
+
+.play-button{
+    top: 14%;
+    left: 40%;
+}
+
 .host-container{
     margin-top: 60px;
 }
